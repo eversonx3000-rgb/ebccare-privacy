@@ -3,50 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EBCCare • Privacy Policy / Política de Privacidade / Política de Privacidad</title>
-  <meta name="description" content="Política de Privacidade do app EBCCare." />
+  <title>EBCCare • Política de Privacidade</title>
+  <meta name="description" content="Privacy Policy / Política de Privacidade / Política de Privacidad do EBCCare." />
   <style>
     :root{
-      --bg:#0b1220; --card:#121a2b; --muted:#9fb0d1; --text:#eaf1ff;
-      --line:#2a3655; --accent:#4cc9f0; --accent2:#7b9cff; --ok:#22c55e;
+      --bg:#0b1220; --card:#121a2b; --line:#2a3655; --text:#eaf1ff; --muted:#9fb0d1;
+      --accent:#4cc9f0; --chip:#1b2540;
     }
     *{box-sizing:border-box}
+    html,body{margin:0}
     body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:linear-gradient(160deg,#090f1d,#111b30 50%,#0a1629); color:var(--text); line-height:1.65;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(160deg,#090f1d,#111b30 50%,#0a1629);
+      color:var(--text); line-height:1.65;
     }
-    .wrap{max-width:980px; margin:40px auto; padding:0 18px;}
+    .wrap{max-width:1020px; margin:28px auto 46px; padding:0 16px;}
     .hero{
-      background:linear-gradient(120deg,rgba(76,201,240,.18),rgba(123,156,255,.18));
-      border:1px solid var(--line); border-radius:18px; padding:24px;
+      background:linear-gradient(120deg,rgba(76,201,240,.16),rgba(123,156,255,.16));
+      border:1px solid var(--line); border-radius:18px; padding:20px;
       box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
-    h1{margin:0 0 8px; font-size:clamp(1.45rem,2.8vw,2rem)}
-    .meta{color:var(--muted); font-size:.95rem}
-    .toc{
-      margin-top:18px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px;
+    h1{margin:0; font-size:clamp(1.3rem,2.7vw,1.9rem)}
+    .meta{margin-top:6px; color:var(--muted); font-size:.95rem}
+    .toolbar{
+      position:sticky; top:0; z-index:20;
+      margin-top:14px; padding:10px; border:1px solid var(--line); border-radius:14px;
+      background:rgba(14,22,40,.85); backdrop-filter:blur(8px);
+      display:flex; gap:8px; align-items:center; flex-wrap:wrap;
     }
+    .toolbar .label{font-size:.88rem; color:var(--muted); margin-right:6px}
+    .btn{
+      border:1px solid var(--line); background:var(--chip); color:#dce8ff; cursor:pointer;
+      border-radius:999px; padding:8px 12px; font-weight:700; font-size:.84rem;
+    }
+    .btn.active{border-color:var(--accent); color:#082032; background:var(--accent)}
+    .btn.secondary{margin-left:auto}
+    .toc, section{
+      margin-top:14px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px;
+    }
+    .toc strong{display:block; margin-bottom:8px}
     .toc a{color:#cfe1ff; text-decoration:none}
     .toc a:hover{color:var(--accent)}
-    section{
-      margin-top:18px; background:var(--card); border:1px solid var(--line);
-      border-radius:14px; padding:18px;
-    }
-    h2{margin:0 0 12px; font-size:1.15rem; color:#d9e7ff}
-    .lang{
-      margin:10px 0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.02);
-    }
-    .tag{
-      display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.04em;
-      padding:3px 8px; border-radius:999px; margin-bottom:6px;
+    h2{margin:0 0 10px; font-size:1.07rem; color:#d9e7ff}
+    .entry{display:none; margin-top:8px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.02)}
+    .entry.show{display:block}
+    .entry .tag{
+      display:inline-block; margin-bottom:6px; padding:2px 8px; border-radius:999px; font-size:.75rem;
       border:1px solid var(--line); color:#dce8ff;
     }
-    ul{margin:8px 0 0 20px}
-    .footer{
-      margin:18px 0 40px; color:var(--muted); font-size:.92rem; text-align:center;
-    }
-    .highlight{color:#d9f99d; font-weight:600}
-    a{color:#9bd8ff}
+    ul{margin:6px 0 0 18px}
+    .footer{margin-top:18px; color:var(--muted); font-size:.9rem; text-align:center}
   </style>
 </head>
 <body>
@@ -54,62 +60,72 @@
     <header class="hero">
       <h1>EBCCare • Privacy Policy / Política de Privacidade / Política de Privacidad</h1>
       <div class="meta">Last Updated / Última Atualização / Última Actualización: <strong>10/05/2026</strong></div>
-      <div class="meta">Controller / Controlador / Responsable: <strong>Everson Batista Carneiro</strong> • Contact: <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="meta">Controller / Controlador / Responsable: <strong>Everson Batista Carneiro</strong> • <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
     </header>
 
+    <div class="toolbar">
+      <span class="label">Idioma / Language:</span>
+      <button class="btn active" data-lang="pt">Português</button>
+      <button class="btn" data-lang="en">English</button>
+      <button class="btn" data-lang="es">Español</button>
+      <button class="btn secondary" id="show-all">Mostrar todos / Show all</button>
+    </div>
+
     <nav class="toc">
-      <strong>Índice / Index</strong>
+      <strong>Índice</strong>
       <ul>
-        <li><a href="#s1">1. Introduction</a></li>
-        <li><a href="#s2">2. Controller and Contact</a></li>
-        <li><a href="#s3">3. Data We Process</a></li>
-        <li><a href="#s4">4. Storage and Data Nature</a></li>
-        <li><a href="#s5">5. Purposes and Legal Bases</a></li>
-        <li><a href="#s6">6. Third-Party Services</a></li>
-        <li><a href="#s61">6.1 Purchases and Premium</a></li>
-        <li><a href="#s7">7. Data Sharing and Sale</a></li>
-        <li><a href="#s8">8. Retention</a></li>
-        <li><a href="#s9">9. User Rights</a></li>
-        <li><a href="#s10">10. Children</a></li>
-        <li><a href="#s11">11. Security Measures</a></li>
-        <li><a href="#s111">11.1 In-App Security Controls</a></li>
-        <li><a href="#s12">12. International Transfers</a></li>
-        <li><a href="#s13">13. Reliability and Medical Disclaimer</a></li>
-        <li><a href="#s14">14. Policy Updates</a></li>
-        <li><a href="#s15">15. Applicable Law and Forum</a></li>
-        <li><a href="#s16">16. Contact</a></li>
+        <li><a href="#s1">1. Introdução / Introduction / Introducción</a></li>
+        <li><a href="#s2">2. Controlador e Contato</a></li>
+        <li><a href="#s3">3. Dados que Tratamos</a></li>
+        <li><a href="#s4">4. Armazenamento e Natureza dos Dados</a></li>
+        <li><a href="#s5">5. Finalidades e Bases Legais</a></li>
+        <li><a href="#s6">6. Serviços de Terceiros</a></li>
+        <li><a href="#s61">6.1 Compras e Premium</a></li>
+        <li><a href="#s7">7. Compartilhamento e Venda de Dados</a></li>
+        <li><a href="#s8">8. Retenção</a></li>
+        <li><a href="#s9">9. Direitos do Usuário</a></li>
+        <li><a href="#s10">10. Crianças</a></li>
+        <li><a href="#s11">11. Medidas de Segurança</a></li>
+        <li><a href="#s111">11.1 Controles de Segurança no App</a></li>
+        <li><a href="#s12">12. Transferências Internacionais</a></li>
+        <li><a href="#s13">13. Confiabilidade e Aviso Médico</a></li>
+        <li><a href="#s14">14. Alterações da Política</a></li>
+        <li><a href="#s15">15. Lei Aplicável e Foro</a></li>
+        <li><a href="#s16">16. Contato</a></li>
       </ul>
     </nav>
 
     <section id="s1">
       <h2>1. Introduction / Introdução / Introducción</h2>
-      <div class="lang"><span class="tag">EN</span> EBCCare, developed by Everson Batista Carneiro, is an app focused on medication reminders, scheduling, stock tracking, and adherence reports. This Privacy Policy explains how data is handled, your rights, and applicable legal terms.</div>
-      <div class="lang"><span class="tag">PT</span> O EBCCare, desenvolvido por Everson Batista Carneiro, é um aplicativo focado em lembretes de medicamentos, agendamento, controle de estoque e relatórios de adesão. Esta Política de Privacidade explica como os dados são tratados, seus direitos e os termos legais aplicáveis.</div>
-      <div class="lang"><span class="tag">ES</span> EBCCare, desarrollado por Everson Batista Carneiro, es una aplicación enfocada en recordatorios de medicamentos, programación, control de existencias e informes de adherencia. Esta Política de Privacidad explica cómo se tratan los datos, sus derechos y los términos legales aplicables.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>O EBCCare, desenvolvido por Everson Batista Carneiro, é um aplicativo focado em lembretes de medicamentos, agendamento, controle de estoque e relatórios de adesão. Esta Política de Privacidade explica como os dados são tratados, seus direitos e os termos legais aplicáveis.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>EBCCare, developed by Everson Batista Carneiro, is an app focused on medication reminders, scheduling, stock tracking, and adherence reports. This Privacy Policy explains how data is handled, your rights, and applicable legal terms.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>EBCCare, desarrollado por Everson Batista Carneiro, es una aplicación enfocada en recordatorios de medicamentos, programación, control de existencias e informes de adherencia. Esta Política de Privacidad explica cómo se tratan los datos, sus derechos y los términos legales aplicables.</div>
     </section>
 
     <section id="s2">
       <h2>2. Controller and Contact / Controlador e Contato / Responsable y Contacto</h2>
-      <div class="lang"><span class="tag">EN/PT/ES</span> Controller / Controlador / Responsable: <strong>Everson Batista Carneiro</strong><br/>Contact / Contato / Contacto: <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Controlador: Everson Batista Carneiro • Contato: <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>Controller: Everson Batista Carneiro • Contact: <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Responsable: Everson Batista Carneiro • Contacto: <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
     </section>
 
     <section id="s3">
       <h2>3. Data We Process / Dados que Tratamos / Datos que Tratamos</h2>
-      <div class="lang"><span class="tag">EN</span>
-        <ul>
-          <li>Local app data entered by user: medications, dosage, schedules, stock, recipients, and dose logs.</li>
-          <li>Support data: email and message submitted through support form (Formspree).</li>
-          <li>Advertising-related technical data (when applicable): data processed by AdMob under Google policies.</li>
-        </ul>
-      </div>
-      <div class="lang"><span class="tag">PT</span>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>
         <ul>
           <li>Dados locais inseridos pelo usuário: medicamentos, dosagens, horários, estoque, destinatários e registros de dose.</li>
           <li>Dados de suporte: e-mail e mensagem enviados pelo formulário (Formspree).</li>
           <li>Dados técnicos ligados à publicidade (quando aplicável): dados processados pelo AdMob conforme políticas do Google.</li>
         </ul>
       </div>
-      <div class="lang"><span class="tag">ES</span>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>
+        <ul>
+          <li>Local app data entered by user: medications, dosage, schedules, stock, recipients, and dose logs.</li>
+          <li>Support data: email and message submitted through support form (Formspree).</li>
+          <li>Advertising-related technical data (when applicable): data processed by AdMob under Google policies.</li>
+        </ul>
+      </div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>
         <ul>
           <li>Datos locales ingresados por el usuario: medicamentos, dosis, horarios, existencias, destinatarios y registros de dosis.</li>
           <li>Datos de soporte: correo electrónico y mensaje enviados mediante formulario (Formspree).</li>
@@ -120,144 +136,146 @@
 
     <section id="s4">
       <h2>4. Storage and Data Nature / Armazenamento e Natureza dos Dados / Almacenamiento y Naturaleza de los Datos</h2>
-      <div class="lang"><span class="tag">EN</span> Health-related app data is stored locally on the device, with encryption at rest applied to sensitive local records. On Android, automatic backup may occur through the user's Google account and system settings. Due to device-bound secure key storage, cloud restore to a different device may not guarantee readable encrypted records. For migration between different devices, use Manual Backup (export/import with password). If the app is deleted, local data may be permanently lost.</div>
-      <div class="lang"><span class="tag">PT</span> Os dados de saúde no aplicativo são armazenados localmente no dispositivo, com criptografia em repouso aplicada aos registros locais sensíveis. No Android, o backup automático pode ocorrer pela Conta Google e pelas configurações do sistema do usuário. Devido ao armazenamento seguro de chave vinculado ao dispositivo, a restauração em nuvem em outro aparelho pode não garantir leitura dos registros criptografados. Para migração entre aparelhos diferentes, utilize o Backup Manual (exportação/importação com senha). Se o app for excluído, os dados locais podem ser perdidos permanentemente.</div>
-      <div class="lang"><span class="tag">ES</span> Los datos de salud en la aplicación se almacenan localmente en el dispositivo, con cifrado en reposo aplicado a los registros locales sensibles. En Android, el respaldo automático puede ocurrir mediante la Cuenta de Google y la configuración del sistema del usuario. Debido al almacenamiento seguro de clave vinculado al dispositivo, la restauración en la nube en otro dispositivo puede no garantizar lectura de registros cifrados. Para migración entre dispositivos diferentes, usa el Respaldo Manual (exportación/importación con contraseña). Si la app se elimina, los datos locales pueden perderse permanentemente.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Os dados de saúde no aplicativo são armazenados localmente no dispositivo, com criptografia em repouso aplicada aos registros locais sensíveis. No Android, o backup automático pode ocorrer pela Conta Google e pelas configurações do sistema do usuário. Devido ao armazenamento seguro de chave vinculado ao dispositivo, a restauração em nuvem em outro aparelho pode não garantir leitura dos registros criptografados. Para migração entre aparelhos diferentes, utilize o Backup Manual (exportação/importação com senha). Se o app for excluído, os dados locais podem ser perdidos permanentemente.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>Health-related app data is stored locally on the device, with encryption at rest applied to sensitive local records. On Android, automatic backup may occur through the user's Google account and system settings. Due to device-bound secure key storage, cloud restore to a different device may not guarantee readable encrypted records. For migration between different devices, use Manual Backup (export/import with password). If the app is deleted, local data may be permanently lost.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Los datos de salud en la aplicación se almacenan localmente en el dispositivo, con cifrado en reposo aplicado a los registros locales sensibles. En Android, el respaldo automático puede ocurrir mediante la Cuenta de Google y la configuración del sistema del usuario. Debido al almacenamiento seguro de clave vinculado al dispositivo, la restauración en la nube en otro dispositivo puede no garantizar lectura de registros cifrados. Para migración entre dispositivos diferentes, usa el Respaldo Manual (exportación/importación con contraseña). Si la app se elimina, los datos locales pueden perderse permanentemente.</div>
     </section>
 
     <section id="s5">
       <h2>5. Purposes and Legal Bases (LGPD/GDPR)</h2>
-      <div class="lang"><span class="tag">EN</span>
-        <ul>
-          <li>App operation (reminders, scheduling, reports): contract performance and/or legitimate interest.</li>
-          <li>Support service: contract performance and/or legitimate interest.</li>
-          <li>Personalized ads (when required): consent.</li>
-        </ul>
-      </div>
-      <div class="lang"><span class="tag">PT</span>
-        <ul>
-          <li>Operação do app (lembretes, agendamento, relatórios): execução de contrato e/ou legítimo interesse.</li>
-          <li>Atendimento de suporte: execução de contrato e/ou legítimo interesse.</li>
-          <li>Anúncios personalizados (quando exigido): consentimento.</li>
-        </ul>
-      </div>
-      <div class="lang"><span class="tag">ES</span>
-        <ul>
-          <li>Funcionamiento de la app (recordatorios, programación, informes): ejecución de contrato y/o interés legítimo.</li>
-          <li>Atención de soporte: ejecución de contrato y/o interés legítimo.</li>
-          <li>Anuncios personalizados (cuando sea requerido): consentimiento.</li>
-        </ul>
-      </div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span><ul><li>Operação do app (lembretes, agendamento, relatórios): execução de contrato e/ou legítimo interesse.</li><li>Atendimento de suporte: execução de contrato e/ou legítimo interesse.</li><li>Anúncios personalizados (quando exigido): consentimento.</li></ul></div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span><ul><li>App operation (reminders, scheduling, reports): contract performance and/or legitimate interest.</li><li>Support service: contract performance and/or legitimate interest.</li><li>Personalized ads (when required): consent.</li></ul></div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span><ul><li>Funcionamiento de la app (recordatorios, programación, informes): ejecución de contrato y/o interés legítimo.</li><li>Atención de soporte: ejecución de contrato y/o interés legítimo.</li><li>Anuncios personalizados (cuando sea requerido): consentimiento.</li></ul></div>
     </section>
 
     <section id="s6">
       <h2>6. Third-Party Services / Serviços de Terceiros / Servicios de Terceros</h2>
-      <div class="lang"><span class="tag">EN</span> EBCCare uses third-party services such as Google AdMob (ads) and Formspree (support form). These services may process data outside your country, according to their own privacy policies.</div>
-      <div class="lang"><span class="tag">PT</span> O EBCCare utiliza serviços de terceiros como Google AdMob (anúncios) e Formspree (formulário de suporte). Esses serviços podem processar dados fora do seu país, conforme suas próprias políticas de privacidade.</div>
-      <div class="lang"><span class="tag">ES</span> EBCCare utiliza servicios de terceros como Google AdMob (anuncios) y Formspree (formulario de soporte). Estos servicios pueden procesar datos fuera de su país, conforme a sus propias políticas de privacidad.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>O EBCCare utiliza serviços de terceiros como Google AdMob (anúncios) e Formspree (formulário de suporte). Esses serviços podem processar dados fora do seu país, conforme suas próprias políticas de privacidade.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>EBCCare uses third-party services such as Google AdMob (ads) and Formspree (support form). These services may process data outside your country, according to their own privacy policies.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>EBCCare utiliza servicios de terceros como Google AdMob (anuncios) y Formspree (formulario de soporte). Estos servicios pueden procesar datos fuera de su país, conforme a sus propias políticas de privacidad.</div>
     </section>
 
     <section id="s61">
       <h2>6.1 Purchases and Premium (RevenueCat)</h2>
-      <div class="lang"><span class="tag">EN</span> EBCCare uses RevenueCat to manage in-app purchases and validate Premium access status. Payment processing data is handled by Google Play according to Google's terms and policies. EBCCare uses anonymous identifiers provided by the purchase flow to verify whether the user has active Premium entitlement.</div>
-      <div class="lang"><span class="tag">PT</span> O EBCCare utiliza o RevenueCat para gerenciar compras no aplicativo e validar o status de acesso Premium. Os dados de pagamento são processados pela Google Play de acordo com os termos e políticas do Google. O EBCCare utiliza identificadores anônimos fornecidos pelo fluxo de compra para verificar se o usuário possui entitlement Premium ativo.</div>
-      <div class="lang"><span class="tag">ES</span> EBCCare utiliza RevenueCat para gestionar compras dentro de la aplicación y validar el estado de acceso Premium. Los datos de pago son procesados por Google Play de acuerdo con los términos y políticas de Google. EBCCare utiliza identificadores anónimos proporcionados por el flujo de compra para verificar si el usuario tiene entitlement Premium activo.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>O EBCCare utiliza o RevenueCat para gerenciar compras no aplicativo e validar o status de acesso Premium. Os dados de pagamento são processados pela Google Play de acordo com os termos e políticas do Google. O EBCCare utiliza identificadores anônimos fornecidos pelo fluxo de compra para verificar se o usuário possui entitlement Premium ativo.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>EBCCare uses RevenueCat to manage in-app purchases and validate Premium access status. Payment processing data is handled by Google Play according to Google's terms and policies. EBCCare uses anonymous identifiers provided by the purchase flow to verify whether the user has active Premium entitlement.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>EBCCare utiliza RevenueCat para gestionar compras dentro de la aplicación y validar el estado de acceso Premium. Los datos de pago son procesados por Google Play de acuerdo con los términos y políticas de Google. EBCCare utiliza identificadores anónimos proporcionados por el flujo de compra para verificar si el usuario tiene entitlement Premium activo.</div>
     </section>
 
     <section id="s7">
       <h2>7. Data Sharing and Sale / Compartilhamento e Venda de Dados / Compartición y Venta de Datos</h2>
-      <div class="lang"><span class="tag">EN</span> We do not sell personal data. We only share data when necessary to provide app features (e.g., third-party services used by the app).</div>
-      <div class="lang"><span class="tag">PT</span> Nós não vendemos dados pessoais. O compartilhamento ocorre apenas quando necessário para viabilizar funcionalidades do app (ex.: serviços de terceiros utilizados pelo aplicativo).</div>
-      <div class="lang"><span class="tag">ES</span> No vendemos datos personales. Solo compartimos datos cuando es necesario para habilitar funcionalidades de la app (p. ej., servicios de terceros utilizados por la aplicación).</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Nós não vendemos dados pessoais. O compartilhamento ocorre apenas quando necessário para viabilizar funcionalidades do app (ex.: serviços de terceiros utilizados pelo aplicativo).</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>We do not sell personal data. We only share data when necessary to provide app features (e.g., third-party services used by the app).</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>No vendemos datos personales. Solo compartimos datos cuando es necesario para habilitar funcionalidades de la app (p. ej., servicios de terceros utilizados por la aplicación).</div>
     </section>
 
     <section id="s8">
       <h2>8. Retention / Retenção / Conservación</h2>
-      <div class="lang"><span class="tag">EN</span>
-        <ul>
-          <li>Local app data remains on device until user removes it or uninstalls the app.</li>
-          <li>Manual backup files exported by user are under user control and retention responsibility.</li>
-          <li>Support messages may be retained for as long as needed to respond, maintain records, and comply with legal obligations.</li>
-        </ul>
-      </div>
-      <div class="lang"><span class="tag">PT</span>
-        <ul>
-          <li>Dados locais do app permanecem no dispositivo até o usuário removê-los ou desinstalar o app.</li>
-          <li>Arquivos de backup manual exportados pelo usuário ficam sob controle e responsabilidade de retenção do próprio usuário.</li>
-          <li>Mensagens de suporte podem ser mantidas pelo tempo necessário para atendimento, manutenção de registros e cumprimento de obrigações legais.</li>
-        </ul>
-      </div>
-      <div class="lang"><span class="tag">ES</span>
-        <ul>
-          <li>Los datos locales de la app permanecen en el dispositivo hasta que el usuario los elimine o desinstale la app.</li>
-          <li>Los archivos de respaldo manual exportados por el usuario quedan bajo control y responsabilidad de conservación del propio usuario.</li>
-          <li>Los mensajes de soporte pueden conservarse durante el tiempo necesario para responder, mantener registros y cumplir obligaciones legales.</li>
-        </ul>
-      </div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span><ul><li>Dados locais do app permanecem no dispositivo até o usuário removê-los ou desinstalar o app.</li><li>Arquivos de backup manual exportados pelo usuário ficam sob controle e responsabilidade de retenção do próprio usuário.</li><li>Mensagens de suporte podem ser mantidas pelo tempo necessário para atendimento, manutenção de registros e cumprimento de obrigações legais.</li></ul></div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span><ul><li>Local app data remains on device until user removes it or uninstalls the app.</li><li>Manual backup files exported by user are under user control and retention responsibility.</li><li>Support messages may be retained for as long as needed to respond, maintain records, and comply with legal obligations.</li></ul></div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span><ul><li>Los datos locales de la app permanecen en el dispositivo hasta que el usuario los elimine o desinstale la app.</li><li>Los archivos de respaldo manual exportados por el usuario quedan bajo control y responsabilidad de conservación del propio usuario.</li><li>Los mensajes de soporte pueden conservarse durante el tiempo necesario para responder, mantener registros y cumplir obligaciones legales.</li></ul></div>
     </section>
 
     <section id="s9">
       <h2>9. User Rights (LGPD/GDPR/CCPA)</h2>
-      <div class="lang"><span class="tag">EN</span> You may request access, correction, deletion, or information about data processing by contacting ebc.dev.apps@gmail.com. For local-only data, deletion depends on user action on the device (or app uninstall).</div>
-      <div class="lang"><span class="tag">PT</span> Você pode solicitar acesso, correção, exclusão ou informações sobre tratamento de dados pelo e-mail ebc.dev.apps@gmail.com. Para dados exclusivamente locais, a exclusão depende de ação do próprio usuário no dispositivo (ou desinstalação do app).</div>
-      <div class="lang"><span class="tag">ES</span> Puede solicitar acceso, corrección, eliminación o información sobre el tratamiento de datos mediante ebc.dev.apps@gmail.com. Para datos exclusivamente locales, la eliminación depende de la acción del propio usuario en el dispositivo (o desinstalación de la app).</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Você pode solicitar acesso, correção, exclusão ou informações sobre tratamento de dados pelo e-mail ebc.dev.apps@gmail.com. Para dados exclusivamente locais, a exclusão depende de ação do próprio usuário no dispositivo (ou desinstalação do app).</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>You may request access, correction, deletion, or information about data processing by contacting ebc.dev.apps@gmail.com. For local-only data, deletion depends on user action on the device (or app uninstall).</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Puede solicitar acceso, corrección, eliminación o información sobre el tratamiento de datos mediante ebc.dev.apps@gmail.com. Para datos exclusivamente locales, la eliminación depende de la acción del propio usuario en el dispositivo (o desinstalación de la app).</div>
     </section>
 
     <section id="s10">
       <h2>10. Children / Crianças / Niños</h2>
-      <div class="lang"><span class="tag">EN</span> The app is not intended for unsupervised minors. Legal guardians may contact us to request guidance or removal of support-related data where applicable.</div>
-      <div class="lang"><span class="tag">PT</span> O app não é direcionado a menores sem supervisão legal. Responsáveis podem entrar em contato para solicitar orientação ou remoção de dados de suporte, quando aplicável.</div>
-      <div class="lang"><span class="tag">ES</span> La app no está dirigida a menores sin supervisión legal. Los responsables legales pueden contactarnos para solicitar orientación o eliminación de datos de soporte, cuando corresponda.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>O app não é direcionado a menores sem supervisão legal. Responsáveis podem entrar em contato para solicitar orientação ou remoção de dados de suporte, quando aplicável.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>The app is not intended for unsupervised minors. Legal guardians may contact us to request guidance or removal of support-related data where applicable.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>La app no está dirigida a menores sin supervisión legal. Los responsables legales pueden contactarnos para solicitar orientación o eliminación de datos de soporte, cuando corresponda.</div>
     </section>
 
     <section id="s11">
       <h2>11. Security Measures / Medidas de Segurança / Medidas de Seguridad</h2>
-      <div class="lang"><span class="tag">EN</span> We adopt reasonable technical and organizational safeguards, including local data architecture, encryption at rest for sensitive local records, password-protected encryption for manual backup files, HTTPS transmission for support requests, and minimization of collected data. No storage or transmission method is 100% secure.</div>
-      <div class="lang"><span class="tag">PT</span> Adotamos medidas técnicas e organizacionais razoáveis, incluindo arquitetura de dados local, criptografia em repouso para registros locais sensíveis, criptografia protegida por senha para arquivos de backup manual, transmissão por HTTPS para solicitações de suporte e minimização de dados coletados. Nenhum método de armazenamento ou transmissão é 100% seguro.</div>
-      <div class="lang"><span class="tag">ES</span> Adoptamos medidas técnicas y organizativas razonables, incluyendo arquitectura de datos local, cifrado en reposo para registros locales sensibles, cifrado protegido por contraseña para archivos de respaldo manual, transmisión HTTPS para solicitudes de soporte y minimización de datos recopilados. Ningún método de almacenamiento o transmisión es 100% seguro.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Adotamos medidas técnicas e organizacionais razoáveis, incluindo arquitetura de dados local, criptografia em repouso para registros locais sensíveis, criptografia protegida por senha para arquivos de backup manual, transmissão por HTTPS para solicitações de suporte e minimização de dados coletados. Nenhum método de armazenamento ou transmissão é 100% seguro.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>We adopt reasonable technical and organizational safeguards, including local data architecture, encryption at rest for sensitive local records, password-protected encryption for manual backup files, HTTPS transmission for support requests, and minimization of collected data. No storage or transmission method is 100% secure.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Adoptamos medidas técnicas y organizativas razonables, incluyendo arquitectura de datos local, cifrado en reposo para registros locales sensibles, cifrado protegido por contraseña para archivos de respaldo manual, transmisión HTTPS para solicitudes de soporte y minimización de datos recopilados. Ningún método de almacenamiento o transmisión es 100% seguro.</div>
     </section>
 
     <section id="s111">
       <h2>11.1 In-App Security Controls / Controles de Segurança no App / Controles de Seguridad en la App</h2>
-      <div class="lang"><span class="tag">EN</span> EBCCare may allow users to enable an in-app protection lock for each medication. When enabled, editing and deleting that medication require native device authentication (biometrics, Face ID, or PIN/password, depending on device support). The "Log Dose" action remains available without authentication to prioritize treatment adherence. The recipient field in edit form may be protected by safety lock and can be unlocked by the user in Settings &gt; Security, when this option is available.</div>
-      <div class="lang"><span class="tag">PT</span> O EBCCare pode permitir ao usuário ativar uma trava de proteção por medicamento. Quando ativa, a edição e a exclusão desse medicamento exigem autenticação nativa do aparelho (biometria, Face ID ou PIN/senha, conforme suporte do dispositivo). A ação "Registrar Dose" permanece disponível sem autenticação para priorizar a adesão ao tratamento. O campo de destinatário no formulário de edição pode permanecer protegido por bloqueio de segurança e pode ser liberado pelo usuário em Configurações &gt; Segurança, quando essa opção estiver disponível.</div>
-      <div class="lang"><span class="tag">ES</span> EBCCare puede permitir al usuario activar un bloqueo de protección por medicamento. Cuando está activo, la edición y la eliminación de ese medicamento requieren autenticación nativa del dispositivo (biometría, Face ID o PIN/clave, según el soporte del dispositivo). La acción "Registrar dosis" permanece disponible sin autenticación para priorizar la adherencia al tratamiento. El campo de destinatario en el formulario de edición puede permanecer protegido por bloqueo de seguridad y puede ser liberado por el usuario en Configuración &gt; Seguridad, cuando esa opción esté disponible.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>O EBCCare pode permitir ao usuário ativar uma trava de proteção por medicamento. Quando ativa, a edição e a exclusão desse medicamento exigem autenticação nativa do aparelho (biometria, Face ID ou PIN/senha, conforme suporte do dispositivo). A ação "Registrar Dose" permanece disponível sem autenticação para priorizar a adesão ao cronograma de medicamentos. O campo de destinatário no formulário de edição pode permanecer protegido por bloqueio de segurança e pode ser liberado pelo usuário em Configurações &gt; Segurança, quando essa opção estiver disponível.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>EBCCare may allow users to enable an in-app protection lock for each medication. When enabled, editing and deleting that medication require native device authentication (biometrics, Face ID, or PIN/password, depending on device support). The "Log Dose" action remains available without authentication to prioritize adherence to the medication schedule. The recipient field in edit form may be protected by safety lock and can be unlocked by the user in Settings &gt; Security, when this option is available.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>EBCCare puede permitir al usuario activar un bloqueo de protección por medicamento. Cuando está activo, la edición y la eliminación de ese medicamento requieren autenticación nativa del dispositivo (biometría, Face ID o PIN/clave, según el soporte del dispositivo). La acción "Registrar dosis" permanece disponible sin autenticación para priorizar la adherencia al cronograma de medicamentos. El campo de destinatario en el formulario de edición puede permanecer protegido por bloqueo de seguridad y puede ser liberado por el usuario en Configuración &gt; Seguridad, cuando esa opción esté disponible.</div>
     </section>
 
     <section id="s12">
       <h2>12. International Transfers / Transferências Internacionais / Transferencias Internacionales</h2>
-      <div class="lang"><span class="tag">EN</span> Third-party providers may process data in other countries, subject to their legal safeguards and policies.</div>
-      <div class="lang"><span class="tag">PT</span> Provedores de terceiros podem processar dados em outros países, sujeitos às respectivas salvaguardas legais e políticas próprias.</div>
-      <div class="lang"><span class="tag">ES</span> Proveedores de terceros pueden procesar datos en otros países, sujetos a sus salvaguardas legales y políticas.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Provedores de terceiros podem processar dados em outros países, sujeitos às respectivas salvaguardas legais e políticas próprias.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>Third-party providers may process data in other countries, subject to their legal safeguards and policies.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Proveedores de terceros pueden procesar datos en otros países, sujetos a sus salvaguardas legales y políticas.</div>
     </section>
 
     <section id="s13">
       <h2>13. Reliability and Medical Disclaimer / Confiabilidade e Aviso Médico / Confiabilidad y Aviso Médico</h2>
-      <div class="lang"><span class="tag">EN</span> EBCCare is provided "as is" as a secondary support tool. Reports depend on the user’s manual action in "Log Dose". If there is no interaction, the displayed status will be: <span class="highlight">"Dose not taken or not recorded in the app"</span>. The developer is not liable for missed doses caused by operating system limitations, battery optimization, device failures, or lack of user interaction. Not for emergency or life-critical use.</div>
-      <div class="lang"><span class="tag">PT</span> O EBCCare é fornecido "como está" como ferramenta de apoio secundário. Os relatórios dependem da ação manual do usuário em "Registrar Dose". Caso não haja interação, o status exibido será: <span class="highlight">"Dose não realizada ou não registrada no app"</span>. O desenvolvedor não se responsabiliza por doses perdidas causadas por limitações do sistema operacional, otimização de bateria, falhas do dispositivo ou ausência de interação do usuário. Não é destinado a uso em emergência ou situações críticas de vida.</div>
-      <div class="lang"><span class="tag">ES</span> EBCCare se ofrece "tal cual" como herramienta de apoyo secundario. Los informes dependen de la acción manual del usuario en "Registrar Dosis". Si no hay interacción, el estado mostrado será: <span class="highlight">"Dosis no realizada o no registrada en la app"</span>. El desarrollador no se responsabiliza por dosis omitidas causadas por limitaciones del sistema operativo, optimización de batería, fallos del dispositivo o falta de interacción del usuario. No está destinado a emergencias ni situaciones críticas de vida.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>O EBCCare é fornecido "como está" como ferramenta de apoio secundário. Os relatórios dependem da ação manual do usuário em "Registrar Dose". Caso não haja interação, o status exibido será: "Dose não realizada ou não registrada no app". O desenvolvedor não se responsabiliza por doses perdidas causadas por limitações do sistema operacional, otimização de bateria, falhas do dispositivo ou ausência de interação do usuário. Não é destinado a uso em emergência ou situações críticas de vida.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>EBCCare is provided "as is" as a secondary support tool. Reports depend on the user’s manual action in "Log Dose". If there is no interaction, the displayed status will be: "Dose not taken or not recorded in the app". The developer is not liable for missed doses caused by operating system limitations, battery optimization, device failures, or lack of user interaction. Not for emergency or life-critical use.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>EBCCare se ofrece "tal cual" como herramienta de apoyo secundario. Los informes dependen de la acción manual del usuario en "Registrar Dosis". Si no hay interacción, el estado mostrado será: "Dosis no realizada o no registrada en la app". El desarrollador no se responsabiliza por dosis omitidas causadas por limitaciones del sistema operativo, optimización de batería, fallos del dispositivo o falta de interacción del usuario. No está destinado a emergencias ni situaciones críticas de vida.</div>
     </section>
 
     <section id="s14">
       <h2>14. Policy Updates / Alterações da Política / Cambios de la Política</h2>
-      <div class="lang"><span class="tag">EN</span> This policy may be updated. The "Last Updated" date indicates the current version.</div>
-      <div class="lang"><span class="tag">PT</span> Esta política pode ser atualizada. A data de "Última Atualização" indica a versão vigente.</div>
-      <div class="lang"><span class="tag">ES</span> Esta política puede actualizarse. La fecha de "Última Actualización" indica la versión vigente.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Esta política pode ser atualizada. A data de "Última Atualização" indica a versão vigente.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>This policy may be updated. The "Last Updated" date indicates the current version.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Esta política puede actualizarse. La fecha de "Última Actualización" indica la versión vigente.</div>
     </section>
 
     <section id="s15">
       <h2>15. Applicable Law and Forum / Lei Aplicável e Foro / Ley Aplicable y Foro</h2>
-      <div class="lang"><span class="tag">EN</span> Brazilian law applies, and the forum of Uberaba/MG is elected, without prejudice to mandatory consumer and data protection rights under applicable law.</div>
-      <div class="lang"><span class="tag">PT</span> Aplica-se a legislação brasileira, ficando eleito o foro de Uberaba/MG, sem prejuízo de direitos obrigatórios do consumidor e de proteção de dados previstos na legislação aplicável.</div>
-      <div class="lang"><span class="tag">ES</span> Se aplica la legislación brasileña y se elige el fuero de Uberaba/MG, sin perjuicio de los derechos obligatorios del consumidor y de protección de datos previstos por la legislación aplicable.</div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span>Aplica-se a legislação brasileira, ficando eleito o foro de Uberaba/MG, sem prejuízo de direitos obrigatórios do consumidor e de proteção de dados previstos na legislação aplicável.</div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span>Brazilian law applies, and the forum of Uberaba/MG is elected, without prejudice to mandatory consumer and data protection rights under applicable law.</div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span>Se aplica la legislación brasileña y se elige el fuero de Uberaba/MG, sin perjuicio de los derechos obligatorios del consumidor y de protección de datos previstos por la legislación aplicable.</div>
     </section>
 
     <section id="s16">
       <h2>16. Contact / Contato / Contacto</h2>
-      <div class="lang"><span class="tag">EN/PT/ES</span> <a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="entry show" data-lang="pt"><span class="tag">PT</span><a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="entry" data-lang="en"><span class="tag">EN</span><a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
+      <div class="entry" data-lang="es"><span class="tag">ES</span><a href="mailto:ebc.dev.apps@gmail.com">ebc.dev.apps@gmail.com</a></div>
     </section>
 
     <p class="footer">EBCCare • Privacy Policy Page</p>
   </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn[data-lang]');
+    const entries = document.querySelectorAll('.entry');
+    const showAllBtn = document.getElementById('show-all');
+    let showAll = false;
+
+    function applyLang(lang){
+      entries.forEach(el=>{
+        const ok = showAll || el.dataset.lang === lang;
+        el.classList.toggle('show', ok);
+      });
+      buttons.forEach(b=>b.classList.toggle('active', b.dataset.lang===lang && !showAll));
+      showAllBtn.textContent = showAll ? 'Mostrar um idioma' : 'Mostrar todos / Show all';
+    }
+
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        showAll = false;
+        applyLang(btn.dataset.lang);
+      });
+    });
+
+    showAllBtn.addEventListener('click', ()=>{
+      showAll = !showAll;
+      if(showAll){
+        entries.forEach(el=>el.classList.add('show'));
+        buttons.forEach(b=>b.classList.remove('active'));
+      } else {
+        applyLang('pt');
+      }
+      showAllBtn.textContent = showAll ? 'Mostrar um idioma' : 'Mostrar todos / Show all';
+    });
+
+    applyLang('pt');
+  </script>
 </body>
 </html>
